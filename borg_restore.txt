@@ -14,6 +14,7 @@ Mon 2023-09-11 00:00:00 UTC 4 days left   n/a                         n/a       
 n/a                         n/a           n/a                         n/a       snapd.snap-repair.timer      snapd.snap-repair.service     
 11 timers listed.
 
+# Список файлов резервируемого каталога (здесь и далее для наглядности часть списка убрана)
 root@client:/etc# ls -l
 total 820
 ...
@@ -77,9 +78,10 @@ drwxr-xr-x 2 root root       4096 Feb 15  2023 rsyslog.d
 drwxr-xr-x 4 root root       4096 Feb 15  2023 security
 drwxr-xr-x 2 root root       4096 Feb 15  2023 selinux
 ...
-
+# Имитируем случайное удаление некоторых файлов из резервируемой директории
 root@client:/etc# rm -r /etc/python3/ /etc/python3.8/
 
+# Список файлов резервируемого каталога после "случайного" удаления
 root@client:/etc# ls -l
 total 824
 ...
@@ -142,6 +144,7 @@ drwxr-xr-x 4 root root       4096 Feb 15  2023 security
 drwxr-xr-x 2 root root       4096 Feb 15  2023 selinux
 ...
 
+# Список резервных файлов на сервере резервирования
 root@client:/etc# borg list borg@192.168.56.10:/var/backup
 Enter passphrase for key ssh://borg@192.168.56.10/var/backup: 
 etc-2023-09-06_09:11:09              Wed, 2023-09-06 09:11:11 [9f746effa073b010f42ffffab55fd9ce4504ee094dbfe8d2a7d7e945f59342b0]
@@ -151,6 +154,7 @@ etc-2023-09-06_09:27:19              Wed, 2023-09-06 09:27:21 [32e91b431ff32262a
 etc-2023-09-06_09:32:44              Wed, 2023-09-06 09:32:45 [465b71cfcaf3c5029918d790da901750545845d45d3addff76cd076d0da1b4aa]
 etc-2023-09-06_09:37:45              Wed, 2023-09-06 09:37:46 [81a3ff316e853f17a8c9194f45e9e29d5c9498fec58bce8673018f717ae6bc08]
 
+# Список файлов отвечающих требованиям в резервном файле на сервере
 root@client:/etc# borg list borg@192.168.56.10:/var/backup::etc-2023-09-06_09:37:45 | grep "python"
 Enter passphrase for key ssh://borg@192.168.56.10/var/backup: 
 drwxr-xr-x root   root          0 Wed, 2023-02-15 21:40:20 etc/python3.8
@@ -159,13 +163,14 @@ drwxr-xr-x root   root          0 Wed, 2023-02-15 21:40:20 etc/python3.8
 drwxr-xr-x root   root          0 Wed, 2023-02-15 21:39:56 etc/python3
 -rw-r--r-- root   root         94 Wed, 2023-02-15 21:39:56 etc/python3/debian_config
 
+# Восстановление "случайно удаленных" файлов в резервируемый каталог
 root@client:/etc# borg extract borg@192.168.56.10:/var/backup/::etc-2023-09-06_09:37:45 etc/python3 etc/python3.8
 Enter passphrase for key ssh://borg@192.168.56.10/var/backup: 
-    
-root@client:/etc# mv etc/python3 /etc/
+кoot@client:/etc# mv etc/python3 /etc/
 root@client:/etc# mv etc/python3.8 /etc/
 rmdir etc/
 
+# Список файлов резервируемого каталога с восстановленными файлами
 root@client:/etc# ls -l
 total 824
 ...
