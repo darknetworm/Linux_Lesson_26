@@ -1,0 +1,231 @@
+
+root@client:/etc# systemctl list-timers --all
+NEXT                        LEFT          LAST                        PASSED    UNIT                         ACTIVATES                     
+Wed 2023-09-06 11:14:28 UTC 1h 26min left n/a                         n/a       motd-news.timer              motd-news.service             
+Wed 2023-09-06 15:46:59 UTC 5h 59min left Wed 2023-09-06 09:09:02 UTC 38min ago ua-timer.timer               ua-timer.service              
+Wed 2023-09-06 18:36:12 UTC 8h left       n/a                         n/a       fwupd-refresh.timer          fwupd-refresh.service         
+Thu 2023-09-07 00:00:00 UTC 14h left      n/a                         n/a       logrotate.timer              logrotate.service             
+Thu 2023-09-07 00:00:00 UTC 14h left      n/a                         n/a       man-db.timer                 man-db.service                
+Thu 2023-09-07 01:39:46 UTC 15h left      n/a                         n/a       apt-daily.timer              apt-daily.service             
+Thu 2023-09-07 06:12:06 UTC 20h left      n/a                         n/a       apt-daily-upgrade.timer      apt-daily-upgrade.service     
+Thu 2023-09-07 09:19:49 UTC 23h left      Wed 2023-09-06 09:19:49 UTC 28min ago systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service
+Sun 2023-09-10 03:10:15 UTC 3 days left   n/a                         n/a       e2scrub_all.timer            e2scrub_all.service           
+Mon 2023-09-11 00:00:00 UTC 4 days left   n/a                         n/a       fstrim.timer                 fstrim.service                
+n/a                         n/a           n/a                         n/a       snapd.snap-repair.timer      snapd.snap-repair.service     
+11 timers listed.
+
+root@client:/etc# ls -l
+total 820
+...
+-rw-r--r-- 1 root root      14867 Feb  1  2019 ltrace.conf
+drwxr-xr-x 3 root root       4096 Feb 15  2023 lvm
+-r--r--r-- 1 root root         33 Sep  6 09:04 machine-id
+-rw-r--r-- 1 root root        111 Jan 16  2020 magic
+-rw-r--r-- 1 root root        111 Jan 16  2020 magic.mime
+-rw-r--r-- 1 root root       3623 Feb 15  2023 mailcap
+-rw-r--r-- 1 root root        449 Oct 18  2019 mailcap.order
+-rw-r--r-- 1 root root          7 Sep  6 09:04 mailname
+-rw-r--r-- 1 root root       5215 Feb 25  2020 manpath.config
+drwxr-xr-x 2 root root       4096 Feb 15  2023 mdadm
+-rw-r--r-- 1 root root      24546 Oct 18  2019 mime.types
+-rw-r--r-- 1 root root        808 Feb 14  2020 mke2fs.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 modprobe.d
+-rw-r--r-- 1 root root        195 Feb 15  2023 modules
+drwxr-xr-x 2 root root       4096 Feb 15  2023 modules-load.d
+lrwxrwxrwx 1 root root         19 Feb 15  2023 mtab -> ../proc/self/mounts
+-rw-r--r-- 1 root root         41 Oct 31  2022 multipath.conf
+-rw-r--r-- 1 root root      10037 Feb  7  2020 nanorc
+drwxr-xr-x 2 root root       4096 Sep  6 09:05 netplan
+drwxr-xr-x 4 root root       4096 Feb 15  2023 network
+drwxr-xr-x 8 root root       4096 Feb 15  2023 networkd-dispatcher
+-rw-r--r-- 1 root root         91 Dec  5  2019 networks
+drwxr-xr-x 2 root root       4096 Feb 15  2023 newt
+-rw-r--r-- 1 root root        510 Feb 15  2023 nsswitch.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 opt
+lrwxrwxrwx 1 root root         21 Aug 22  2022 os-release -> ../usr/lib/os-release
+-rw-r--r-- 1 root root       6920 Nov  2  2021 overlayroot.conf
+-rw-r--r-- 1 root root        112 Feb 15  2023 overlayroot.local.conf
+-rw-r--r-- 1 root root        552 Dec 17  2019 pam.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 pam.d
+-rw-r--r-- 1 root root       1885 Sep  6 09:05 passwd
+-rw-r--r-- 1 root root       1834 Sep  6 09:04 passwd-
+drwxr-xr-x 3 root root       4096 Feb 15  2023 perl
+drwxr-xr-x 4 root root       4096 Feb 15  2023 pki
+drwxr-xr-x 3 root root       4096 Feb 15  2023 pm
+drwxr-xr-x 4 root root       4096 Feb 15  2023 polkit-1
+drwxr-xr-x 2 root root       4096 Feb 15  2023 pollinate
+-rw-r--r-- 1 root root          0 Feb 15  2023 popularity-contest.conf
+-rw-r--r-- 1 root root        581 Dec  5  2019 profile
+drwxr-xr-x 2 root root       4096 Feb 15  2023 profile.d
+-rw-r--r-- 1 root root       2932 Apr  1  2013 protocols
+drwxr-xr-x 2 root root       4096 Feb 15  2023 python3
+drwxr-xr-x 2 root root       4096 Feb 15  2023 python3.8
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc0.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc1.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc2.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc3.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc4.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc5.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc6.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rcS.d
+lrwxrwxrwx 1 root root         39 Feb 15  2023 resolv.conf -> ../run/systemd/resolve/stub-resolv.conf
+lrwxrwxrwx 1 root root         13 Mar 15  2022 rmt -> /usr/sbin/rmt
+-rw-r--r-- 1 root root        887 Apr  1  2013 rpc
+-rw-r--r-- 1 root root       1382 Feb 11  2020 rsyslog.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rsyslog.d
+-rw-r--r-- 1 root root       3663 Jun 20  2016 screenrc
+drwxr-xr-x 4 root root       4096 Feb 15  2023 security
+drwxr-xr-x 2 root root       4096 Feb 15  2023 selinux
+...
+
+root@client:/etc# rm -r /etc/python3/ /etc/python3.8/
+
+root@client:/etc# ls -l
+total 824
+...
+-rw-r--r-- 1 root root      14867 Feb  1  2019 ltrace.conf
+drwxr-xr-x 3 root root       4096 Feb 15  2023 lvm
+-r--r--r-- 1 root root         33 Sep  6 09:04 machine-id
+-rw-r--r-- 1 root root        111 Jan 16  2020 magic
+-rw-r--r-- 1 root root        111 Jan 16  2020 magic.mime
+-rw-r--r-- 1 root root       3623 Feb 15  2023 mailcap
+-rw-r--r-- 1 root root        449 Oct 18  2019 mailcap.order
+-rw-r--r-- 1 root root          7 Sep  6 09:04 mailname
+-rw-r--r-- 1 root root       5215 Feb 25  2020 manpath.config
+drwxr-xr-x 2 root root       4096 Feb 15  2023 mdadm
+-rw-r--r-- 1 root root      24546 Oct 18  2019 mime.types
+-rw-r--r-- 1 root root        808 Feb 14  2020 mke2fs.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 modprobe.d
+-rw-r--r-- 1 root root        195 Feb 15  2023 modules
+drwxr-xr-x 2 root root       4096 Feb 15  2023 modules-load.d
+lrwxrwxrwx 1 root root         19 Feb 15  2023 mtab -> ../proc/self/mounts
+-rw-r--r-- 1 root root         41 Oct 31  2022 multipath.conf
+-rw-r--r-- 1 root root      10037 Feb  7  2020 nanorc
+drwxr-xr-x 2 root root       4096 Sep  6 09:05 netplan
+drwxr-xr-x 4 root root       4096 Feb 15  2023 network
+drwxr-xr-x 8 root root       4096 Feb 15  2023 networkd-dispatcher
+-rw-r--r-- 1 root root         91 Dec  5  2019 networks
+drwxr-xr-x 2 root root       4096 Feb 15  2023 newt
+-rw-r--r-- 1 root root        510 Feb 15  2023 nsswitch.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 opt
+lrwxrwxrwx 1 root root         21 Aug 22  2022 os-release -> ../usr/lib/os-release
+-rw-r--r-- 1 root root       6920 Nov  2  2021 overlayroot.conf
+-rw-r--r-- 1 root root        112 Feb 15  2023 overlayroot.local.conf
+-rw-r--r-- 1 root root        552 Dec 17  2019 pam.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 pam.d
+-rw-r--r-- 1 root root       1885 Sep  6 09:05 passwd
+-rw-r--r-- 1 root root       1834 Sep  6 09:04 passwd-
+drwxr-xr-x 3 root root       4096 Feb 15  2023 perl
+drwxr-xr-x 4 root root       4096 Feb 15  2023 pki
+drwxr-xr-x 3 root root       4096 Feb 15  2023 pm
+drwxr-xr-x 4 root root       4096 Feb 15  2023 polkit-1
+drwxr-xr-x 2 root root       4096 Feb 15  2023 pollinate
+-rw-r--r-- 1 root root          0 Feb 15  2023 popularity-contest.conf
+-rw-r--r-- 1 root root        581 Dec  5  2019 profile
+drwxr-xr-x 2 root root       4096 Feb 15  2023 profile.d
+-rw-r--r-- 1 root root       2932 Apr  1  2013 protocols
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc0.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc1.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc2.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc3.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc4.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc5.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc6.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rcS.d
+lrwxrwxrwx 1 root root         39 Feb 15  2023 resolv.conf -> ../run/systemd/resolve/stub-resolv.conf
+lrwxrwxrwx 1 root root         13 Mar 15  2022 rmt -> /usr/sbin/rmt
+-rw-r--r-- 1 root root        887 Apr  1  2013 rpc
+-rw-r--r-- 1 root root       1382 Feb 11  2020 rsyslog.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rsyslog.d
+-rw-r--r-- 1 root root       3663 Jun 20  2016 screenrc
+drwxr-xr-x 4 root root       4096 Feb 15  2023 security
+drwxr-xr-x 2 root root       4096 Feb 15  2023 selinux
+...
+
+root@client:/etc# borg list borg@192.168.56.10:/var/backup
+Enter passphrase for key ssh://borg@192.168.56.10/var/backup: 
+etc-2023-09-06_09:11:09              Wed, 2023-09-06 09:11:11 [9f746effa073b010f42ffffab55fd9ce4504ee094dbfe8d2a7d7e945f59342b0]
+etc-2023-09-06_09:16:55              Wed, 2023-09-06 09:16:56 [cab5144d7100cd33ed4e574c0d328dc305efc0ec49f330f14eebd61809f75918]
+etc-2023-09-06_09:22:03              Wed, 2023-09-06 09:22:04 [8fc7c0d43425b1789286c619bc16b0a8af3041a1e07689b735cd00568419c5f9]
+etc-2023-09-06_09:27:19              Wed, 2023-09-06 09:27:21 [32e91b431ff32262a75f641c68f11dc5ec1004df9cc1644cc27c2a1c609377e9]
+etc-2023-09-06_09:32:44              Wed, 2023-09-06 09:32:45 [465b71cfcaf3c5029918d790da901750545845d45d3addff76cd076d0da1b4aa]
+etc-2023-09-06_09:37:45              Wed, 2023-09-06 09:37:46 [81a3ff316e853f17a8c9194f45e9e29d5c9498fec58bce8673018f717ae6bc08]
+
+root@client:/etc# borg list borg@192.168.56.10:/var/backup::etc-2023-09-06_09:37:45 | grep "python"
+Enter passphrase for key ssh://borg@192.168.56.10/var/backup: 
+drwxr-xr-x root   root          0 Wed, 2023-02-15 21:40:20 etc/python3.8
+-rw-r--r-- root   root        155 Fri, 2020-03-13 10:14:16 etc/python3.8/sitecustomize.py
+-rw-r--r-- root   root       1538 Tue, 2020-05-19 16:59:49 etc/apparmor.d/abstractions/python
+drwxr-xr-x root   root          0 Wed, 2023-02-15 21:39:56 etc/python3
+-rw-r--r-- root   root         94 Wed, 2023-02-15 21:39:56 etc/python3/debian_config
+
+root@client:/etc# borg extract borg@192.168.56.10:/var/backup/::etc-2023-09-06_09:37:45 etc/python3 etc/python3.8
+Enter passphrase for key ssh://borg@192.168.56.10/var/backup: 
+    
+root@client:/etc# mv etc/python3 /etc/
+root@client:/etc# mv etc/python3.8 /etc/
+rmdir etc/
+
+root@client:/etc# ls -l
+total 824
+...
+-rw-r--r-- 1 root root      14867 Feb  1  2019 ltrace.conf
+drwxr-xr-x 3 root root       4096 Feb 15  2023 lvm
+-r--r--r-- 1 root root         33 Sep  6 09:04 machine-id
+-rw-r--r-- 1 root root        111 Jan 16  2020 magic
+-rw-r--r-- 1 root root        111 Jan 16  2020 magic.mime
+-rw-r--r-- 1 root root       3623 Feb 15  2023 mailcap
+-rw-r--r-- 1 root root        449 Oct 18  2019 mailcap.order
+-rw-r--r-- 1 root root          7 Sep  6 09:04 mailname
+-rw-r--r-- 1 root root       5215 Feb 25  2020 manpath.config
+drwxr-xr-x 2 root root       4096 Feb 15  2023 mdadm
+-rw-r--r-- 1 root root      24546 Oct 18  2019 mime.types
+-rw-r--r-- 1 root root        808 Feb 14  2020 mke2fs.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 modprobe.d
+-rw-r--r-- 1 root root        195 Feb 15  2023 modules
+drwxr-xr-x 2 root root       4096 Feb 15  2023 modules-load.d
+lrwxrwxrwx 1 root root         19 Feb 15  2023 mtab -> ../proc/self/mounts
+-rw-r--r-- 1 root root         41 Oct 31  2022 multipath.conf
+-rw-r--r-- 1 root root      10037 Feb  7  2020 nanorc
+drwxr-xr-x 2 root root       4096 Sep  6 09:05 netplan
+drwxr-xr-x 4 root root       4096 Feb 15  2023 network
+drwxr-xr-x 8 root root       4096 Feb 15  2023 networkd-dispatcher
+-rw-r--r-- 1 root root         91 Dec  5  2019 networks
+drwxr-xr-x 2 root root       4096 Feb 15  2023 newt
+-rw-r--r-- 1 root root        510 Feb 15  2023 nsswitch.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 opt
+lrwxrwxrwx 1 root root         21 Aug 22  2022 os-release -> ../usr/lib/os-release
+-rw-r--r-- 1 root root       6920 Nov  2  2021 overlayroot.conf
+-rw-r--r-- 1 root root        112 Feb 15  2023 overlayroot.local.conf
+-rw-r--r-- 1 root root        552 Dec 17  2019 pam.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 pam.d
+-rw-r--r-- 1 root root       1885 Sep  6 09:05 passwd
+-rw-r--r-- 1 root root       1834 Sep  6 09:04 passwd-
+drwxr-xr-x 3 root root       4096 Feb 15  2023 perl
+drwxr-xr-x 4 root root       4096 Feb 15  2023 pki
+drwxr-xr-x 3 root root       4096 Feb 15  2023 pm
+drwxr-xr-x 4 root root       4096 Feb 15  2023 polkit-1
+drwxr-xr-x 2 root root       4096 Feb 15  2023 pollinate
+-rw-r--r-- 1 root root          0 Feb 15  2023 popularity-contest.conf
+-rw-r--r-- 1 root root        581 Dec  5  2019 profile
+drwxr-xr-x 2 root root       4096 Feb 15  2023 profile.d
+-rw-r--r-- 1 root root       2932 Apr  1  2013 protocols
+drwxr-xr-x 2 root root       4096 Feb 15  2023 python3
+drwxr-xr-x 2 root root       4096 Feb 15  2023 python3.8
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc0.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc1.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc2.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc3.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc4.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc5.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rc6.d
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rcS.d
+lrwxrwxrwx 1 root root         39 Feb 15  2023 resolv.conf -> ../run/systemd/resolve/stub-resolv.conf
+lrwxrwxrwx 1 root root         13 Mar 15  2022 rmt -> /usr/sbin/rmt
+-rw-r--r-- 1 root root        887 Apr  1  2013 rpc
+-rw-r--r-- 1 root root       1382 Feb 11  2020 rsyslog.conf
+drwxr-xr-x 2 root root       4096 Feb 15  2023 rsyslog.d
+-rw-r--r-- 1 root root       3663 Jun 20  2016 screenrc
+drwxr-xr-x 4 root root       4096 Feb 15  2023 security
+drwxr-xr-x 2 root root       4096 Feb 15  2023 selinux
+...
