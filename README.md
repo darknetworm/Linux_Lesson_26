@@ -26,7 +26,8 @@
 ### Проверка работоспособности стенда
 
 Список резервных копий на сервере
-
+![borg_files](https://github.com/darknetworm/Linux_Lesson_26/assets/82410807/a1f3e482-fcf4-480f-81cc-56358e309628)
 Логи выполнения резервного копирования
-
+![syslog](https://github.com/darknetworm/Linux_Lesson_26/assets/82410807/d785a175-fc0a-4838-9eee-faf3efde6e54)
 **borg_restore.txt** - файл процесса восстановления из резервной копии, записанный утилитой scrupt
+
