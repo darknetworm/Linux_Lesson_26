@@ -21,6 +21,7 @@
 
   	borg init --encryption=repokey borg@192.168.56.10:/var/backup/
 
+Для использования отличной от "111" парольной фразы необходимо изменить значение Environment="BORG_PASSPHRASE=111" в файле templates/borg-backup.service
 ---
 
 ### Проверка работоспособности стенда
