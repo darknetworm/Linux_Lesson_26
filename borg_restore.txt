@@ -1,4 +1,4 @@
-
+# Проверяем отключение таймера сервиса сщздания резервных копий (borg-backup.timer)
 root@client:/etc# systemctl list-timers --all
 NEXT                        LEFT          LAST                        PASSED    UNIT                         ACTIVATES                     
 Wed 2023-09-06 11:14:28 UTC 1h 26min left n/a                         n/a       motd-news.timer              motd-news.service             
